@@ -1,0 +1,21 @@
+{
+    "kind": "ImageStream",
+    "apiVersion": "v1",
+    "metadata": {
+        "name": "simple-http-server"
+    },
+    "spec": {
+        "tags": [
+            {
+                "name": "latest",
+                "annotations": {
+                    "tags": "builder"
+                },
+                "from": {
+                    "kind": "DockerImage",
+                    "name": "submod/tensorflow-serving-s2i:latest"
+                }
+            }
+        ]
+    }
+}
